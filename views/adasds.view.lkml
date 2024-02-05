@@ -1,19 +1,23 @@
 view: adasds {
   # # You can specify the table name if it's different from the view name:
-  # sql_table_name: my_schema_name.tester ;;
+  derived_table: {
+    sql: Select *
+      FROM `santo-data-warehouse-prod.PORTFOLIO_PROJETOS_TRUSTED.VW_DIM_SQUAD`  AS vw_dim_squad
+LEFT JOIN `santo-data-warehouse-prod.PORTFOLIO_PROJETOS_TRUSTED.VW_DIM_PROJETO`  AS vw_dim_projeto ON vw_dim_squad.id = vw_dim_projeto.id_squad;;
+  }
   #
   # # Define your dimensions and measures here, like this:
-  # dimension: user_id {
-  #   description: "Unique ID for each user that has ordered"
-  #   type: number
-  #   sql: ${TABLE}.user_id ;;
-  # }
+  dimension: squad_id {
+    label: "Squad ID"
+    description: "Unique ID for each user that has ordered"
+    type: string
+    sql: ${TABLE}.id ;;
+  }
   #
-  # dimension: lifetime_orders {
-  #   description: "The total number of orders for each user"
-  #   type: number
-  #   sql: ${TABLE}.lifetime_orders ;;
-  # }
+  dimension: nome_squad {
+    type: string
+    sql: ${TABLE}.squad ;;
+  }
   #
   # dimension_group: most_recent_purchase {
   #   description: "The date when each user last ordered"

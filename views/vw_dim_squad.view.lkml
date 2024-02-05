@@ -42,6 +42,7 @@ view: vw_dim_squad {
   }
 
   dimension: squad {
+    description: "Nome da Squad"
     type: string
     sql: ${TABLE}.squad ;;
   }
@@ -51,6 +52,7 @@ view: vw_dim_squad {
   }
 
   measure: nova_medida {
+    description: "Contagem distinta de Squad"
     type: count_distinct
     sql: ${squad} ;;
   }
