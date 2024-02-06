@@ -4,7 +4,7 @@
 
 LookML is a data modeling language for describing dimensions, fields, aggregates and relationships based on SQL.
 
-LookML is powerful because it:
+LookML is powerful because it:ss
 
 - **Is all about reusability**: Most data analysis requires the same work to be done over and over again. You extract
 raw data, prepare it, deliver an analysis... and then are never able touse any of that work again. This is hugely
@@ -15,7 +15,7 @@ encapsulates the complexity of SQL, it and lets analysts get the knowledge about
 their heads so others can use it. This enables non-technical users to do their jobs &mdash; building dashboards,
 drilling to row-level detail, and accessing complex metrics &mdash; without having to worry about what’s behind the curtain.
 - **Allows for data governance**: By defining business metrics in LookML, you can ensure that Looker is always a
-credible single source of truth.
+credible single source of truth.sss
 
 The Looker application uses a model written in LookML to construct SQL queries against a particular database that
 business analysts can [Explore](https://cloud.google.com/looker/docs/r/exploring-data) on. For an overview on the basics of LookML, see [What is LookML?](https://cloud.google.com/looker/docs/r/what-is-lookml)
